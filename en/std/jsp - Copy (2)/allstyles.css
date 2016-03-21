@@ -1,0 +1,258 @@
+/*-------- START -------- This CSS effects the dropdown menu's on the SetAdType.jsp page. -----------------*/
+
+#category li { 
+  margin-bottom:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-left:20px;
+  list-style:none;  
+}
+#category ul { 
+  margin-bottom:0px;
+  margin-top:0px;
+  margin-right:0px;
+  margin-left:0px; 
+}
+#category a:link{
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; */
+  font-weight:bold;
+  /* color:#666666; */
+  text-decoration: none;
+}
+#category a:visited{
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:#666666; */
+  font-weight:bold;
+  text-decoration: none;
+}
+#category a:active{
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:#666666; */
+  font-weight:bold;
+  text-decoration: none;
+}
+#category a:hover{
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:#666666; */
+  font-weight:bold;
+	text-decoration: underline;
+}
+
+
+/*-------- END -------- This CSS effects the dropdown menu's on the SetAdType.jsp page. -----------------*/
+/*-------- START -------- This CSS effects how all the ".jsp" pages display. -----------------*/
+
+.packagepatterndescriptionvalue{
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:#000000; */
+}
+
+.packagepatterndescriptionlabel{
+ /*  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color:#000000; */
+}
+
+.packagepatterndescriptiontable{
+ /*  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0px;
+  color:#FFFFFF; */
+}
+
+.PageName {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #666666;  
+	/* change display to :none; to hide page names */
+	display:inline;
+}
+.mgroupheadercell {
+  /* background-color:#FFFFFF;
+  text-align: left; */
+}
+.mgroupname {
+	/* font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	text-align: left; */
+}
+.mmaintable {
+  /* background-color:#FFFFFF;
+  border:none; */
+}
+.mattrlabeltext {
+  /* font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #333333;
+	text-align: left; */
+}
+.mattrlabelcell {
+  /* background-color:#FFFFFF;
+  vertical-align:top; */
+}
+.mgroupdesc {
+	display: block;
+}
+textarea {
+	display: block;
+}
+/*-------- END -------- This CSS effects how all the ".jsp" pages display. -----------------*/
+
+/*BEGIN new Bootstrap specific CSS*/
+
+.Enewaccount fieldset {
+  /* padding: 1em;
+  font:100%/1 sans-serif; */
+  }
+.Enewaccount label {
+  /* float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+ 
+  font-weight:bold; */ 
+  text-align:right;
+}
+.Enewaccount .col-sm-9{
+		padding-right: 0px;
+		padding-left: 0px;
+}
+.Enewaccount .col-sm-3{
+		padding-right: 5px;
+		padding-left: 0px;
+}
+.Enewaccount li {
+	padding-top: 25px
+}
+/*Sticky footer code*/
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll; 
+}
+body {
+  /* Margin bottom by footer height */
+  width:100%;
+  margin-bottom: 40px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+.previewGrid {
+	width:220px;
+	padding:5px;
+}
+/*jumping modal fix
+.modal {
+	overflow-y: auto;
+}
+		
+.modal-open {
+	overflow: auto;
+}*/
+.modal-open[style] {
+padding-right: 0px !important;
+}
+/* hiding buttons class */
+.hideBUT {
+	display:none;
+}
+
+ .navbar-transparent {
+   background: rgba(5,5,5,0.4);
+}
+
+/* css craig */
+
+h2, .navbar a {
+ font-family: "Oswald", sans-serif;
+}
+.navbar a:hover {
+color:#daffcb!important;
+}
+.packagename {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;  
+	/* change display to :none; to hide page names :all; to show */
+	display:all;
+
+}
+.navbar-brand {
+margin-top: -5px;
+}
+.navbar-inverse {
+background:#010E2E;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+background:#525868;
+}
+.customHeader {
+background:none!important;
+height:30px!important;
+}
+
+#loginBut {
+margin-top:10px;
+}
+.menuLeft {
+padding:10px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+font-family: "Oswald", sans-serif;
+font-size:14px;
+background:#f5f5f5!important;
+border: 1px solid #E9E9E9;
+}
+.menuLeft a {
+display:block;
+}
+
+
+.panel h3 {
+ font-family: "Oswald", sans-serif;
+ font-size:16px;
+ display:inline;
+}
+.cf-price {
+ font-family: "Oswald", sans-serif;
+ color: #2c3e50;
+ font-size:14px;
+}
+#pckDisplay .btn-default {
+margin-bottom:20px;
+}
+@media screen and (max-width:689px) {
+.packagetable {
+float:none!important; 
+width:100%!important;
+}
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+fieldset input[type=checkbox]{
+float:left;
+margin-right: 10px;
+}
+fieldset legend {
+padding-top: 20px;
+margin-bottom:0;
+font-family: "Oswald", sans-serif;
+}

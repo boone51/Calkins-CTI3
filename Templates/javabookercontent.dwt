@@ -1,0 +1,309 @@
+<%@ taglib uri="/Mactive/AdBookerTags" prefix="adbooker" %>
+<%@ taglib uri="/Mactive/CustomerManagerTags" prefix="customermanager" %>
+<%@ taglib uri="/Mactive/CustomerBillingTags" prefix="customerbilling" %>
+<%@ taglib uri="/Mactive/BusinessAreaTags" prefix="businessarea" %>
+<%@ taglib uri="/Mactive/CustomerNotesTags" prefix="customernotes" %>
+<%@ taglib uri="/Mactive/AccountNumberTags" prefix="accountnumber" %>
+<%@ taglib uri="/Mactive/CustomerAliasTags" prefix="customeralias" %>
+
+<%@ taglib uri="/Mactive/CustomerAddressTags" prefix="customeraddress" %>
+<%@ taglib uri="/Mactive/WebBaseTags" prefix="webbase" %>
+<%@ taglib uri="/Mactive/AdBookerSearchTags" prefix="search" %>
+<%@ taglib uri="/Mactive/SharedTags" prefix="shared" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- DW6 -->
+<!-- TemplateInfo codeOutsideHTMLIsLocked="true" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Mactive JavaBooker</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../scripts/javabooker.css" type="text/css">
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 5;
+
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+  this.numberofmenuitems = 5;
+  this.caller = document.getElementById(callname);
+  this.thediv = document.getElementById(divname);
+  this.thediv.style.visibility = startstate;
+}
+
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+    var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+  }
+  theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+      shutdiv.style.visibility='hidden';
+    }
+  }
+}
+// -->
+</script>
+
+<script src="../scripts/OpenThought.js" type="text/javascript"></script>
+<script src="../scripts/help.js" type="text/javascript"></script>
+<script src="../scripts/FormValidation.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function locateObject(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=locateObject(n,d.layers[i].document); return x;
+}
+
+function hideTooltip(object)
+{
+if (document.all)
+{
+	locateObject(object).style.visibility="hidden"
+	locateObject(object).style.left = 1;
+	locateObject(object).style.top = 1;
+return false
+}
+else if (document.layers)
+{
+	locateObject(object).visibility="hide"
+	locateObject(object).left = 1;
+	locateObject(object).top = 1;
+	return false
+}
+else
+	return true
+}
+
+function showTooltip(object,e, tipContent, backcolor, bordercolor, textcolor, displaytime)
+{
+	window.clearTimeout(tipTimer)
+
+	if (document.all)
+		{
+			locateObject(object).style.top=document.body.scrollTop+event.clientY+20
+
+			locateObject(object).innerHTML='<table style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; border: '+bordercolor+'; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: '+backcolor+'" width="10" border="0" cellspacing="1" cellpadding="1"><tr><td nowrap><font style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; color: '+textcolor+'">'+unescape(tipContent)+'</font></td></tr></table> '
+
+			if ((e.x + locateObject(object).clientWidth) > (document.body.clientWidth + document.body.scrollLeft))
+				{
+					locateObject(object).style.left = (document.body.clientWidth + document.body.scrollLeft) - locateObject(object).clientWidth-10;
+				}
+			else
+			{
+			locateObject(object).style.left=document.body.scrollLeft+event.clientX
+			}
+		locateObject(object).style.visibility="visible"
+		tipTimer=window.setTimeout("hideTooltip('"+object+"')", displaytime);
+		return true;
+		}
+	else if (document.layers)
+		{
+		locateObject(object).document.write('<table width="10" border="0" cellspacing="1" cellpadding="1"><tr bgcolor="'+bordercolor+'"><td><table width="10" border="0" cellspacing="0" cellpadding="2"><tr bgcolor="'+backcolor+'"><td nowrap><font style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; color: '+textcolor+'">'+unescape(tipContent)+'</font></td></tr></table></td></tr></table>')
+		locateObject(object).document.close()
+		locateObject(object).top=e.y+20
+
+		if ((e.x + locateObject(object).clip.width) > (window.pageXOffset + window.innerWidth))
+			{
+				locateObject(object).left = window.innerWidth - locateObject(object).clip.width-10;
+			}
+		else
+			{
+			locateObject(object).left=e.x;
+			}
+		locateObject(object).visibility="show"
+		tipTimer=window.setTimeout("hideTooltip('"+object+"')", displaytime);
+		return true;
+	}
+	else
+	{
+		return true;
+	}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.style1 {color: #333333}
+-->
+</style>
+</head>
+<body onmousemove="closesubnav(event);"> 
+<shared:FormValidationMask />
+
+<div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="../pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
+
+<div id="masthead"> 
+  <h1 id="siteName">Mactive JavaBooker </h1> 
+  <div id="utility"> 
+    <a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=exit')">Log Off </a> | <a href="#">My To Do List</a> | <a href="#">About JavaBooker</a> | <a href="#">Help</a> 
+  </div> 
+  <div id="globalNav"> 
+    <img alt="" src="../images/gblnav_left.gif" height="32" width="4" id="gnl"> <img alt="" src="../images/glbnav_right.gif" height="32" width="4" id="gnr"> 
+    <div id="globalLink"> 
+      <a href="#" id="gl1" class="glink" onmouseover="ehandler(event,menuitem1);">Search</a>
+      <a href="#" id="gl2" class="glink" onmouseover="ehandler(event,menuitem2);">Create New Customer</a>
+	  <a href="#" id="gl3" class="glink" onmouseover="ehandler(event,menuitem3);">Book an Order </a>
+	  <a href="#" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">Customer Manager</a>
+	  <a href="#" id="gl5" class="glink" onmouseover="ehandler(event,menuitem5);">Graphics Browser </a>
+
+	</div> 
+    <!--end globalLinks--> 
+    <form id="search" action=""> 
+      <input name="searchFor" type="text" size="10"> 
+      <a href="">search</a> 
+    </form> 
+  </div> 
+  <!-- end globalNav --> 
+  <div id="subglobal1" class="subglobalNav"> 
+    <a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customerSearch', 'command=searchMyCustomers');">My Customers</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=AdvancedCustomerSearch.jsp');">Advanced Search</a> | 
+	<a href="#">Today's Orders</a> | 
+	<a href="#">Ad Order Search</a> | 
+	<a href="#">Expired Orders</a> |  
+  </div> 
+  <div id="subglobal2" class="subglobalNav"> 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=newCustomer');">Create New Customer</a> |  
+  </div> 
+  <div id="subglobal3" class="subglobalNav"> 
+    <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=adorder', 'command=newCustomerOrder');">New Customer Order</a> | 	   
+    <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=adorder', 'command=newAdOrderViaWizard', 'nextURL=SetAdTypeRecruitment.jsp');">Use Wizard</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=main.jsp');">Liner</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=main.jsp');">Display</a> | 
+	<a href="#">Pre-print</a> | 
+  </div> 
+  <div id="subglobal4" class="subglobalNav">     
+    <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=customer.jsp');">Customer Details</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=customerbilling.jsp');">Billing</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=customercredit.jsp');">Credit</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=customerweb.jsp');">Web</a> | 
+	<a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=CustomerAccountNumbers');">Account Number(s)</a> | 
+	<a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=GenericInitialization', 'table=BusinessAreas');">Business Area(s)</a> | 
+	<a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=GenericInitialization', 'table=CustomerNotes');">CustomerNote(s)</a> | 
+	<a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=GenericInitialization', 'table=CustomerAlias');">Name Alias(s)</a> | 
+	<a href="javascript:parent.SendParameters('WebBaseMain.ot', 'run_mode=customer', 'command=GenericInitialization', 'table=CustomerAddress');">CustomerAddress(es)</a> | 
+
+  </div> 
+  <div id="subglobal5" class="subglobalNav"> 
+    <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchAllGraphics', 'nextURL=graphics.jsp');">All Graphics</a> | 
+    <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchCustomerLogos', 'nextURL=graphics.jsp');">Customer Logos</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchPlacement', 'nextURL=graphics.jsp');">Placement</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchLogoGroup', 'nextURL=graphics.jsp');">Logo Group</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchSalesRep', 'nextURL=graphics.jsp');">Sales Rep</a> | 
+	<a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=graphicSearch', 'searchType=searchAdCategory', 'nextURL=graphics.jsp');">Ad Category</a> | 
+  </div> 
+
+</div> 
+<!-- end masthead --> 
+<div id="pagecell1">
+  <!--pagecell1-->
+  <img alt="" src="../scripts/tl_curve_white.gif" height="6" width="6" id="tl"> <img alt="" src="../scripts/tr_curve_white.gif" height="6" width="6" id="tr">
+<!-- TemplateBeginEditable name="BreadCrumb" -->
+  <div id="breadCrumb"> 
+   <a href="JavaScript:parent.SendParameters('WebBaseMain.ot', 'run_mode=action', 'command=loadJsp', 'param1=main.jsp');">General</a> / <a href="#">Breadcrumb</a> / <a href="#">Breadcrumb</a> /
+  </div> 
+<!-- TemplateEndEditable -->
+  <div id="pageName">
+    <h2><!-- TemplateBeginEditable name="PageName" -->Page Name <!-- TemplateEndEditable --></h2>
+  </div>
+    <!-- TemplateBeginEditable name="sectionLinks" -->    
+	<div id="pageNav">
+	<div id="sectionLinks"> <a href="#">Section Link</a> <a href="#">Section
+        Link</a> <a href="#">Section Link</a> <a href="#">Section Link</a> <a href="#">Section
+        Link</a> <a href="#">Section Link</a> </div>
+    <div class="relatedLinks">
+      <h3>Related Link Category</h3>
+      <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related
+      Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related
+      Link</a> </div>
+    <div class="relatedLinks">
+      <h3>Related Link Category</h3>
+      <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related
+      Link</a> <a href="#">Related Link</a> <a href="#">Related Link</a> <a href="#">Related
+      Link</a> </div>
+
+ <!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="content" -->
+  <div id="content">
+    <div id="NameandAccount">
+         <table width="300" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="right"><CustomerManager:CustomerTextarea  cssClass="InputFields" dataType="LastName" cols="16" /></div>
+            </td>
+            <td><div align="right"><CustomerManager:CustomerTextarea  cssClass="InputFields" dataType="FirstName" cols="16" /></div>
+            </td>
+            <td><div align="right"><CustomerManager:CustomerLabel  cssClass="InputFields" dataType="AccountNumber" cols="16" /></div>
+            </td>
+          </tr>
+        </table>
+</div>
+
+    <div class="feature">      <h3>&nbsp;</h3>
+    </div>
+    <div class="story"></div>
+    <div class="story">    </div>
+  </div>
+  <!-- TemplateEndEditable -->
+  <!-- TemplateBeginEditable name="bottom" -->
+  <div id="siteInfo">  | <span class="style1">&copy;2003
+      Mactive</span></div>
+  <!-- TemplateEndEditable -->
+</div>
+<!--end pagecell1--> 
+<br> 
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(5,1,"hidden");
+			var menuitem2 = new menu(5,2,"hidden");
+			var menuitem3 = new menu(5,3,"hidden");
+			var menuitem4 = new menu(5,4,"hidden");
+			var menuitem5 = new menu(5,5,"hidden");
+    // -->
+    </script> 
+</body>
+<script language="JavaScript">parent.LoadNewContentDone()</script>
+</html>

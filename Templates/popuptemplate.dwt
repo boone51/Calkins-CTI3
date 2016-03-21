@@ -1,0 +1,19 @@
+<%@ taglib uri="/Mactive/AdBookerTags" prefix="adbooker" %>
+<%@ taglib uri="/Mactive/WebBaseTags" prefix="webbase" %>
+<html>
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>JBooker by Mactive</title>
+<!-- TemplateEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- Fireworks MX Dreamweaver MX target.  Created Mon Feb 10 11:06:32 GMT-0500 (Eastern Standard Time) 2003-->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<SCRIPT language="JavaScript" src="../scripts/OpenThought.js"></SCRIPT>
+<script language="JavaScript1.2" src="../scripts/help.js"></script>
+<link href="../scripts/webbooker.css" rel="stylesheet" type="text/css">
+
+</head>
+<body bgcolor="#EBE9E3" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- TemplateBeginEditable name="adbooker" -->adbooker<span class="Panels"></span><!-- TemplateEndEditable -->
+</body>
+</html>

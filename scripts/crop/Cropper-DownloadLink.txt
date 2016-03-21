@@ -1,0 +1,4 @@
+
+10/16/2008 Link to site where jsCropperUI-1.2.0.zip download was available:
+
+http://www.defusion.org.uk/code/javascript-image-cropper-ui-using-prototype-scriptaculous/

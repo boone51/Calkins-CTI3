@@ -1,0 +1,78 @@
+<html>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//
+/*=============================================================================
+  $Id: minResponse.html,v 1.6 2005/03/30 19:22:52 rverghese Exp $
+  Based on Stacy Haven's rfreturn.htm code from eBay Motors.
+ *=============================================================================*/
+
+/**
+ Parse the query string 
+*/
+
+function MBParseQueryStr(url) {
+
+    var gPV = new Object;
+
+    gPV.imageResults = new Array();
+
+    if ( url.search(/\=/) == -1 ) return false;
+
+    url = url.split("?")[1].split("&");
+    for ( var x = 0; x < url.length; x++) {
+	//if( url[x].search(/\=/) == -1 ) continue;
+        var pv = url[x].split("=");
+// rimfire return URL will have string "result" in it
+	if ( pv[0].toLowerCase().search(/result/) > -1) {
+		gPV.imageResults[gPV.imageResults.length] = pv[1];
+	  }
+        else {
+            eval("gPV."+pv[0]+"='"+pv[1]+"'");
+	 }
+     }
+    return gPV;
+}
+
+/*=============================================================================
+  Program entry point.
+  Prepare an object from the query string returned by  Rimfire and then call 
+  gMinbrowse.handleResponse() in the parent window. 
+ *=============================================================================*/
+if ( location.search ) {
+    var mfmyvars = MBParseQueryStr(location.search);
+	
+
+	// Was a pop up window opened?, else use the IFrame
+	if ( document.layers ) {
+        if ( opener ) {
+				setTimeout("opener.gMinbrowse.handleResponse(mfmyvars);",100);
+
+
+	 }
+      }
+    else {
+       if ( parent ) 
+       {
+			if ( parent.parent && parent.parent.gMinbrowse ) 
+			{
+				if (navigator.platform.search(/Mac/)>-1 && navigator.userAgent.search(/MSIE/)>-1)
+					parent.parent.gMinbrowse.handleResponse(mfmyvars);
+				else
+					setTimeout("parent.parent.gMinbrowse.handleResponse(mfmyvars);",100);
+			}
+			else if ( parent.gMinbrowse.handleResponse ) 
+			{
+				if (navigator.platform.search(/Mac/)>-1 && navigator.userAgent.search(/MSIE/)>-1)
+					parent.gMinbrowse.handleResponse(mfmyvars);
+				else
+					setTimeout("parent.gMinbrowse.handleResponse(mfmyvars);",100);
+			}
+       }
+     }
+}
+//-->
+</script>
+
+<body>
+</body>
+</html>

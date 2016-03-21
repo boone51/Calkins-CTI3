@@ -1,0 +1,38 @@
+<%@ taglib uri="/Mactive/AdBookerTags" prefix="adbooker" %>
+<%@ taglib uri="/Mactive/WebBaseTags" prefix="webbase" %>
+<html>
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>JBooker by Mactive</title>
+<!-- TemplateEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- Fireworks MX Dreamweaver MX target.  Created Mon Feb 10 11:06:32 GMT-0500 (Eastern Standard Time) 2003-->
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+
+<SCRIPT language="JavaScript" src="../scripts/OpenThought.js"></SCRIPT>
+<script language="JavaScript1.2" src="../scripts/help.js"></script>
+
+<link href="../scripts/webbooker.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#EDEEEC" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="docTipsLayer" style="position: absolute; z-index: 1000; visibility: hidden;
+ left: 0px; top: 0px; width: 10px">&nbsp;</div>
+
+<div id="staticTipLayer" style="position: absolute; z-index: 1000; visibility: hidden;
+ left: 0px; top: 0px; width: 10px">&nbsp;</div>
+
+<div id="nestTipLayer" style="position: absolute; z-index: 1000; visibility: hidden;
+ left: 0px; top: 0px; width: 10px">&nbsp;</div>
+
+<div id="stickyTipLayer" style="position: absolute; z-index: 1000; visibility: hidden;
+ left: 0px; top: 0px; width: 10px">&nbsp;</div>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr width="100%">
+          <td colspan="2"><!-- TemplateBeginEditable name="adbooker" -->adbooker<!-- TemplateEndEditable --></td>
+        </tr>
+</table>
+<style>
+BODY {SCROLLBAR-FACE-COLOR: #8AACB7; SCROLLBAR-HIGHLIGHT-COLOR: #8AACB7; SCROLLBAR-SHADOW-COLOR: #666666; SCROLLBAR-3DLIGHT-COLOR: #FFFFFF; SCROLLBAR-ARROW-COLOR:  #FFFFFF; SCROLLBAR-TRACK-COLOR: #CCCCCC; SCROLLBAR-DARKSHADOW-COLOR: #666666; }
+</style>
+</body>
+</html>

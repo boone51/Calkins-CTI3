@@ -1,0 +1,145 @@
+body, div {
+  font-family: Verdana, Arial, Sans-Serif;
+  background-color: White;
+  color: #2d4056;
+  background: transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+div.dynamic-topic {
+  background-color: #dbe0e5;
+  cursor: hand;
+}
+
+div.dynamic-content {
+  padding: 2px 0px 2px 10px;
+}
+
+a.function-link {
+  text-decoration: none;
+  font-size: x-small;
+  font-weight: bolder;
+  color: #2d4056;
+}
+
+a.function-link:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+a.function-link-right {
+  text-decoration: none;
+  text-align: right;
+  font-size: x-small;
+  font-weight: bolder;
+  color: #2d4056;
+}
+
+a.function-link-right:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+td.header {
+  font-size: large;
+  font-weight: bolder;
+}
+
+td.header-description {
+  font-size: xx-small;
+}
+
+td.footer {
+  border: 1px solid #2d4056;
+  background-color: #dbe0e5;
+  text-align: center;
+  font-size: xx-small;
+  padding: 2px 0px 2px 0px;
+}
+
+td.tag-name {
+  font-size: small;
+  font-weight: bolder;
+  white-space: nowrap;
+  padding: 4px 10px 4px 10px;
+}
+
+td.tag-class {
+  font-size: xx-small;
+  white-space: nowrap;
+  padding: 4px 10px 4px 10px;
+}
+
+td.tag-description-label {
+  vertical-align: top;
+  font-size: small;
+  font-weight: bolder;
+}
+
+td.tag-description {
+  vertical-align: top;
+  font-size: small;
+}
+
+td.attr-header {
+  background-color: #dbe0e5;
+  border: 1px solid #dbe0e5;
+  text-align: center;
+  font-size: x-small;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+td.attr-label {
+  background-color: #dbe0e5;
+  border-top: 1px solid white;
+  border-right: 1px solid dbe0e5;
+  border-bottom: 1px solid dbe0e5;
+  border-left: 1px solid dbe0e5;
+  font-size: x-small;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+td.attr-name {
+  border: 1px solid #dbe0e5;
+  vertical-align: top;
+  font-size: x-small;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+td.attr-name-true {
+  background-color: #e6ebf0;
+  border: 1px solid #dbe0e5;
+  vertical-align: top;
+  font-size: x-small;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+td.attr-req {
+  border: 1px solid #dbe0e5;
+  vertical-align: top;
+  font-size: x-small;
+  white-space: nowrap;
+}
+
+td.attr-req-true {
+  background-color: #e6ebf0;
+  border: 1px solid #dbe0e5;
+  vertical-align: top;
+  font-size: x-small;
+  white-space: nowrap;
+}
+
+td.attr-description {
+  border: 1px solid #dbe0e5;
+  vertical-align: top;
+  font-size: x-small;
+}
+
+td.section-footer {
+  text-align: center;
+}

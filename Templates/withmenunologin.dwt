@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Mactive AdBase E Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../scripts/allstyles.css" type="text/css">
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 5;
+
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+  this.numberofmenuitems = 5;
+  this.caller = document.getElementById(callname);
+  this.thediv = document.getElementById(divname);
+  this.thediv.style.visibility = startstate;
+}
+
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+    var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+  }
+  theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+      shutdiv.style.visibility='hidden';
+    }
+  }
+}
+// -->
+</script>
+
+<!-- TemplateBeginEditable name="documenthead" -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+
+<!-- TemplateEndEditable -->
+</head>
+<body topmargin="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="790" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="790" height="500" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+        <td><img src="../images/spacer.gif" width="1" height="1"></td>
+        <td><table width="790" height="500" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr> 
+                      <td width="163" height="70"><div align="center"><img src="../images/logo/sitelogo.jpg" width="790" height="65"></div></td>
+                    <tr> 
+                      <td bgcolor="#71828a" colspan="2">
+  <div id="globalNav"> 
+    <img alt="" src="../images/gblnav_left.gif" height="32" width="4" id="gnl"> <img alt="" src="../images/glbnav_right.gif" height="32" width="4" id="gnr"> 
+    <div id="globalLink"> 
+<webbase:showIf expression="isFakeCustomerLoggedIn">
+      <a href="WebBaseMain.do?NextURL=/jsp/SetAdType.jsp" id="gl1" class="glink" onmouseover="ehandler(event,menuitem1);">Place an Ad</a>
+      <a href="WebBaseMain.do?NextURL=/jsp/adwritingtips.jsp" target="_blank" class="glink" id="gl2" onmouseover="ehandler(event,menuitem2);">Ad Writing Tips</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/deadlines.jsp" target="_blank" class="glink" id="gl3" onmouseover="ehandler(event,menuitem3);">Deadlines</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/rates.jsp" target="_blank" class="glink" id="gl4" onmouseover="ehandler(event,menuitem4);">Rates</a>
+	  <a href="WebBaseMain.do?cmd=LogOff&NextURL=/jsp/logout.htm" id="gl5" class="glink" onmouseover="ehandler(event,menuitem5);">Logoff</a>
+</webbase:showIf>
+<webbase:showIf expression="!isFakeCustomerLoggedIn">
+      <a href="WebBaseMain.do?NextURL=/jsp/SetAdType.jsp" id="gl1" class="glink" onmouseover="ehandler(event,menuitem1);">Place an Ad</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/ViewProfileSummary.jsp" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">Your Profile</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/ViewCurrentOrders.jsp" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">Your Orders</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/accountsummary.jsp" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">Your Account</a>
+      <a href="WebBaseMain.do?NextURL=/jsp/adwritingtips.jsp" target="_blank" class="glink" id="gl2" onmouseover="ehandler(event,menuitem2);">Ad Writing Tips</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/deadlines.jsp" target="_blank" class="glink" id="gl3" onmouseover="ehandler(event,menuitem3);">Deadlines</a>
+	  <a href="WebBaseMain.do?NextURL=/jsp/rates.jsp" target="_blank" class="glink" id="gl4" onmouseover="ehandler(event,menuitem4);">Rates</a>
+	  <a href="WebBaseMain.do?cmd=LogOff&NextURL=/jsp/logout.htm" id="gl5" class="glink" onmouseover="ehandler(event,menuitem5);">Logoff</a>
+</webbase:showIf>
+	</div> 
+	<div id="subglobal1" class="subglobalNav"> 
+	  <a href="WebBaseMain.do?NextURL=/jsp/SetAdType.jsp">Place an Ad</a>
+    </div> 
+	<div id="subglobal2" class="subglobalNav"> 
+	  <a href="WebBaseMain.do?NextURL=/jsp/adwritingtips.jsp">Ad Writing Tips</a>
+    </div> 
+	<div id="subglobal3" class="subglobalNav"> 
+	  <a href="WebBaseMain.do?NextURL=/jsp/deadlines.jsp">Deadlines</a>
+    </div> 
+	<div id="subglobal4" class="subglobalNav"> 
+	  <a href="WebBaseMain.do?NextURL=/jsp/rates.jsp">Rates</a>
+    </div> 
+	<div id="subglobal5" class="subglobalNav"> 
+	  <a href="WebBaseMain.do?cmd=LogOff&NextURL=/jsp/logout.htm">Logoff</a>
+    </div> 
+    <!--end globalLinks--> 
+  </div> 
+					  
+					    <!--table border="0" cellpadding="0" cellspacing="0">
+                          <tr> 
+                           	<td> <div align="center"><a href="WebBaseMain.do?NextURL=/jsp/SetAdType.jsp"><img src="../images/navigation/placeanad.gif" width="79" height="17" border="0"></a></div></td>
+                            <td> <div align="center"><a href="#adwritingtips"><img src="../images/navigation/adwritingtips.gif" width="99" height="17" border="0" onClick="MM_openBrWindow('','','')"></a></div></td>
+                            <td> <div align="center"><a href="#Deadlines"><img src="../images/navigation/deadlines.gif" width="69" height="17" border="0" onClick="MM_openBrWindow('','','')"></a></div></td>
+                            <td> <div align="center"><a href="#rates"><img src="../images/navigation/rates.gif" width="41" height="17" border="0" onClick="MM_openBrWindow('','','')"></a></div></td>
+                            <td> <div align="center"><a href="WebBaseMain.do?cmd=LogOff&NextURL=/jsp/logout.htm"><img src="../images/navigation/logoff.gif" width="53" height="17" border="0"></a></div></td>
+                          </tr>
+                        </table-->
+						</td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#71828a" colspan="2"><img src="../images/spacer.gif" width="1"><img src="../images/table_top.gif" width="100%" height="9"></td>
+                    </tr>
+                    <tr valign="top" align='center'> 
+                      <td colspan="2" bgcolor="#FFFFFF" height="420"><div align="center"><!-- TemplateBeginEditable name="Content" --><!-- TemplateEndEditable --></div></td>
+                    </tr>
+                    <tr> 
+                      <td height="10" colspan="2" bgcolor="#FFFFFF"><div align="center"><font size="1" face="Arial, Helvetica, sans-serif">&copy; 
+                          2003 Mactive Inc. All Rights Reserved.</font></div></td>
+                    </tr>
+                  </table></td>
+        <td><img src="../images/spacer.gif" width="1" height="1"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><img src="../images/spacer.gif" width="1" height="1"></td>
+      </tr>
+    </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(5,1,"hidden");
+			var menuitem2 = new menu(5,2,"hidden");
+			var menuitem3 = new menu(5,3,"hidden");
+			var menuitem4 = new menu(5,4,"hidden");
+			var menuitem5 = new menu(5,5,"hidden");
+    // -->
+    </script> 
+
+</body>
+<!-- IPIX redirect to landing page that requires Rimfire control acceptance -->
+
+</html>

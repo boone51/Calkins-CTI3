@@ -1,0 +1,4 @@
+#
+# Cluster configuration file specifies the name of the node configuration
+# file for starting up the AdbaseWebServers / Load balancing operations
+ClusterConfigurationFile=M:/Mactive/Data/AdbaseSystemManagerConfig/AdbaseSystemManagerCfg.xml

@@ -1,0 +1,449 @@
+/* CSS Document */
+
+body {
+	scrollbar-face-color: ;
+	scrollbar-highlight-color: ;
+	scrollbar-shadow-color: ;
+	scrollbar-3dlight-color: ;
+	scrollbar-arrow-color:  ;
+	scrollbar-track-color: ;
+	scrollbar-darkshadow-color: ;
+}
+
+.lowText {
+	color: #ffffff;
+	font: bold 12px Arial, Helvetica;
+	text-decoration: none
+}
+
+.highText {
+	color: #ffffff;
+	font: bold 12px Arial, Helvetica;
+	text-decoration: none
+}
+
+.itemBorder {
+	border-top: #666666 1px solid;
+	border-right: #666666 1px solid;
+	border-bottom: #666666 1px solid
+	border-left: #666666 1px solid;
+}
+
+.itemBorderBlank {
+	border-top: #ccccdd 1px solid;
+	border-right: #ccccdd 1px solid;
+	border-bottom: #ccccdd 1px solid
+	border-left: #ccccdd 1px solid;
+}
+
+.buttonText {
+	color: #ffcc99;
+	font: bold 12px Arial, Helvetica;
+	text-decoration: none
+}
+
+.buttonHover {
+	padding: 1px 1px 1px 1px;
+	color: #007b82;
+	font: bold 12px Arial, Helvetica;
+	text-decoration: none
+}
+
+.buttonBorder {
+	border: 1px outset #999999;
+}
+
+.buttonBorderOver {
+	border: #cc9966 1px inset;
+}
+
+.invisible {
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	display: none;
+}
+
+.divider {
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+}
+
+.Labels {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+	vertical-align: bottom;
+}
+
+.navigation {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-bottom-color: #ffffff;
+	border-bottom-width: thin;
+	background-color: #efefe7;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+	font-weight: bold;
+	vertical-align: bottom;
+	line-height: 42px;
+	word-spacing: normal;
+}
+
+.SearchDetailLabels {
+	background-color: #e5e5dd;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+	vertical-align: bottom;
+}
+
+.SearchDetailText {
+	background-color: #edeeec;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+	vertical-align: bottom;
+}
+
+.Panels {
+	border: 0px none;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: bold;
+	font-variant: normal;
+}
+
+.TableBack {
+	margin: 2px;
+	padding: 2px;
+	background-color: #efefe7;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.TableFront {
+	height: 100%;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.ResultsFields {
+	height: 18px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	vertical-align: text-bottom;
+	line-height: 18px;
+}
+
+.EditableFields {
+	height: 18px;
+	margin: 0px;
+	padding: 0px;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	vertical-align: text-bottom;
+	line-height: 18px;
+}
+
+.NonEditableFields {
+	height: 18px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #efefe7;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	vertical-align: text-bottom;
+	line-height: 18px;
+}
+
+.InputFields {
+	height: 18px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #7f9db9;
+	background-color: White;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	vertical-align: text-bottom;
+}
+
+.InputFieldsRequired {
+	background-color: #ffff00;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	font-weight: normal;
+}
+
+.InputFieldsSearch {
+	background-color: #00ccff;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	font-weight: normal;
+}
+
+.TableBackPanels {
+	height: auto;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px ridge #ffffff;
+	background-position: center top;
+	background-color: #eeeee6;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.Labelstopalign {
+	height: 15px;
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+	vertical-align: top;
+	text-indent: 3px;
+}
+
+.PanelTitles {
+	width: auto;
+	height: auto;
+	margin: 1px;
+	padding: 1px;
+	border-top-width: 1px solid #efefe7;
+	border-right-style: none;
+	border-bottom-width: 1px;
+	border-left-style: none;
+	background-position: left bottom;
+	background-color: efefe7;
+	color: 333333;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	line-height: 12px;
+	vertical-align: bottom;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+}
+
+.SelectedGraphic {
+	background-color: #999999;
+	color: #000000;
+	font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.Row1 {
+	background-color: #ffffff;
+}
+
+.Row2 {
+	background-color: #ddeeff;
+}
+
+.graphicsbrowserbgrnd {
+	background-color: #6484a4;
+	color: #ffffff;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.menubar {
+	background-color: #005c82;
+}
+
+.navBorder {
+	border: 1px double;
+}
+
+.LinkAction {
+	color: 006691;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	list-style-position: inside;
+	list-style-type: none;
+	font-size: xx-small;
+	cursor: hand;
+}
+
+/*                  LEGEND
+|                                            |
+| .content    -- the content div             |
+| .tabs       -- the div that holds all tabs |
+| .tab        -- an inactive tab             |
+| .tabActive  -- an active tab               |
+| .tabHover   -- an inactive tab onMouseOver |
+|___________________________________________*/
+
+.content {
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	width: 180px;
+	height: 200;
+	margin-left: 2px;
+	padding: 2px;
+	border: 1px none #cccccc;
+	z-index: 10011;
+	background-color: #eeeee6;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	font-weight: normal;
+	overflow: hidden;
+	visibility: visible;
+}
+
+.content .padder {
+}
+
+div.tabs {
+	position: absolute;
+	top: 80;
+	left: 2px;
+	width: 180;
+	z-index: 10013;
+	background-color: #efefe7;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: 500!important;
+	font-size: 9px;
+	line-height: 15px;
+	white-space: nowrap;
+	cursor: default !important;
+
+	/* -Moz-User-Select: none;*/
+}
+
+.tab {
+	 padding: 2px 7px 1px;
+	 border: 1px solid #347;
+	 border-bottom-width: 0;
+	 z-index: 100;
+	 background-color: #C9C9AD;
+	 color: #303036;
+}
+
+.tabHover {
+	 border-bottom-width: 0;
+	 z-index: 1200;
+	 background-color: #46596f;
+	 color:#fff;
+}
+
+.tabActive {
+	 padding: 3px 9px 3px 9px;
+	 z-index: 10000;
+	 background-color: #efefe7;
+	 color: #060610 ;
+}
+
+.TableBackSearches {
+	margin: 2px;
+	padding: 2px;
+	background-color: #eeeee6;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-style: normal;
+	font-size: xx-small;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+#viewsrc {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	width: 130px;
+	margin: 8px;
+	border: 1px solid #003;
+	background-color: #f3f6fc;
+}
+
+/* Rules for Tabs Clone option
+ *
+ * Tabs on the bottom do not have a top border
+ */
+div.tabsClone .tab, div.tabsClone .tabActive {
+	border-top-width: 0 !important;
+	border-bottom-width: 1px !important;
+}
+
+div.tabsClone .tabActive {
+	top: -2px;
+}
+
+a.removeTab {
+	font-size: smaller;
+	text-decoration: none;
+}
+
+.NameandAccount {
+	height: 18px;
+	border: 1px solid #7f9db9;
+	background-color: White;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	font-weight: bold;
+	vertical-align: text-bottom;
+}
+
+.checkbox {
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	line-height: 15px;
+}
+
+.dropdown {
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: xx-small;
+	line-height: 15px;
+}

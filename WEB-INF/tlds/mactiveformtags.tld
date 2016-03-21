@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE
+  taglib
+  PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+	"http://java.sun.com/j2ee/dtds/web-jsptaglib_1_1.dtd">
+
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>mactiveformtags</shortname>
+	<info>The HTML form tag library</info>
+
+	<tag>
+		<name>formcontainerbase</name>
+		<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.FormContainerBase</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<info>A tag to build a form</info>
+	</tag>
+
+ 	<tag>
+  		<name>mform</name>
+    	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MForm</tagclass>
+     	<bodycontent>JSP</bodycontent>
+    </tag>
+
+    <tag>
+    	<name>mcheckbox</name>
+     	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MCheckbox</tagclass>
+      	<bodycontent>JSP</bodycontent>
+    </tag>
+
+    <tag>
+    	<name>mradiobtn</name>
+     	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MRadioButton</tagclass>
+      	<bodycontent>JSP</bodycontent>
+    </tag>
+
+    <tag>
+    	<name>mtextarea</name>
+     	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MTextArea</tagclass>
+      	<bodycontent>JSP</bodycontent>
+    </tag>
+
+    <tag>
+    	<name>mtextfield</name>
+     	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MT</tagclass>
+      	<bodycontent>JSP</bodycontent>
+    </tag>
+
+    <tag>
+    	<name>meditor</name>
+     	<tagclass>com.mactiveinc.webbase.taglib.mactiveformtags.MEditor</tagclass>
+      	<bodycontent>JSP</bodycontent>
+    </tag>
+
+
+</taglib>

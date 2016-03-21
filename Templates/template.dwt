@@ -1,0 +1,111 @@
+<%@ taglib uri="/Mactive/WebBaseTags" prefix="webbase" %>
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>AdBase Times, Booking an Ad - Compose and Schedule</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT LANGUAGE="JavaScript" SRC=scripts/calendar.js"></SCRIPT>
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="left"></div>
+<table width="100%" border="0">
+  <tr> 
+    <td><!-- #BeginEditable "TopGraphic" --><a href="../jsp/ViewProfileSummary.jsp"><img src="../images/tabsprofile.gif" width=660 height=43 border=0 usemap="#tabsprofile_Map"></a><!-- #EndEditable --> 
+      <map name="tabsprofile_Map"> 
+        <area shape="rect" alt="Account Summary" coords="339,0,460,19" href="../jsp/ViewProfileSummary.jsp" target="_self">
+        <area shape="rect" alt="View/Edit Orders" coords="175,-1,282,19" href="../jsp/ViewCurrentOrders.jsp" target="_self">
+        <area shape="rect" alt="Place an Ad" coords="26,3,119,19" href="../jsp/SetAdType.jsp" target="_self">
+        <area shape="rect" coords="491,1,613,18" href="../jsp/ViewProfileSummary.jsp">
+      </map>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top"> <!-- #BeginEditable "Editable" -->
+      <table width="602" border="0" cellspacing="0" cellpadding="3">
+        <tr> 
+          <td width="20" bgcolor="#FFFFFF" height="2"><img src=images/pixel.gif" width="20" height="8"></td>
+          <td colspan="4" bgcolor="#FFFFFF" height="2" width="570"> 
+            <table cellpadding=0 cellspacing=0 border=0 width=596>
+              <tr> 
+                <td> 
+                  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Title 
+                    Image</font></p>
+                </td>
+                <td align=RIGHT>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td colspan=2 height=6></td>
+              </tr>
+              <tr bgcolor="00007d"> 
+                <td colspan=2 height=2 background=images/titledot.gif"><img src=images/spaceit.gif" width="1" height="1"></td>
+              </tr>
+              <td colspan=2 height=12></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="20" bgcolor="#FFFFFF" height="13">&nbsp;</td>
+          <td colspan="4" bgcolor="#FFFFFF" height="13" width="570"> 
+            <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Text</font></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="20" bgcolor="#FFFFFF">&nbsp;</td>
+          <td colspan="4" bgcolor="#FFFFFF" width="570" valign="top"> 
+            <table width="100%" border="2" height="248">
+              <tr> 
+                <td bgcolor="#C1C6B3"> 
+                  <div align="center"><font color="#FFFFFF" face="Arial, Helvetica, sans-serif" size="2"><b><font color="#000000">Customer 
+                    Information</font></b></font></div>
+                </td>
+              </tr>
+              <tr> 
+                <td height="315" valign="top"> 
+                  <form method="post" action="" name="FormName">
+                    <div align="left"> 
+                      <table width="100%" border="0">
+                        <tr> 
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr> 
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td width="20" bgcolor="#FFFFFF" height="2">&nbsp;</td>
+          <td bgcolor="#FFFFFF" height="2" colspan="4" width="570">&nbsp; </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

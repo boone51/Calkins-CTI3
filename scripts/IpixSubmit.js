@@ -1,0 +1,4 @@
+function SubmitData()
+{
+    MF.submit();
+}

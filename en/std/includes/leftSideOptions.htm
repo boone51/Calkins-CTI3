@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" href="../jsp/allstyles.css">
+<table width="100" border="0" cellpadding="5" cellspacing="0" class="menuTable">
+  <tr>
+    <td height="10" valign="middle" class="menuHead">User Options</td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="WebBaseMain.do?urlaction=pop" class="menuLinks">&raquo; Place Your Ad</a></td>
+  </tr>
+  <webbase:showIf expression="!isFakeCustomerLoggedIn">
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="WebBaseMain.do?NextURL=/jsp/ViewProfileSummary.jsp" class="menuLinks">&raquo; My Profile</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle"><a href="WebBaseMain.do?NextURL=/jsp/ViewCurrentOrders.jsp" class="menuLinks">&raquo; My Orders</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle"><a href="WebBaseMain.do?NextURL=/jsp/AdOrderSearch.jsp" class="menuLinks">&raquo; Search Orders</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="WebBaseMain.do?NextURL=/jsp/accountsummary.jsp" class="menuLinks">&raquo; Account Summary</a></td>
+  </tr>
+  </webbase:showIf>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="#" class="menuLinks">&raquo; Deadlines</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="#" class="menuLinks">&raquo; Rates</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="#" class="menuLinks">&raquo; Ad Writing Tips</a></td>
+  </tr>
+  <tr>
+    <td height="15" valign="middle" nowrap="nowrap"><a href="WebBaseMain.do?cmd=LogOff&NextURL=/jsp/logout.jsp" class="menuLinks">&raquo; Log Off</a></td>
+  </tr>
+</table>

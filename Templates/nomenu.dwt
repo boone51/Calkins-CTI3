@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Mactive AdBase E Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../scripts/allstyles.css" type="text/css">
+
+</head>
+
+<body background="../images/background.png" topmargin="0">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="790" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="790" height="500" border="0" align="center" cellpadding="0" cellspacing="0" class="">
+            <tr>
+              <td><img src="../images/spacer.gif" width="1" height="1"></td>
+              <td><table width="790" height="500" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr> 
+                      <td width="163" height="70"><div align="center"><img src="../images/logo/sitelogo.jpg" width="790" height="65"></div></td>
+                    </tr>
+                    <tr> 
+                      <td height="10" background="../images/background.png">&nbsp;</td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#71828a"><div align="right"><img src="../images/table_top.gif" width="100%" height="9"></div></td>
+                    </tr>
+                    <tr valign="top" align="center"> 
+                      <td bgcolor="#FFFFFF" height="420"><!-- TemplateBeginEditable name="Content" --><!-- TemplateEndEditable --></td>
+                    </tr>
+                    <tr> 
+                      <td height="10" bgcolor="#FFFFFF"><div align="center"><font size="1" face="Arial, Helvetica, sans-serif">&copy; 
+                          2003 Mactive Inc. All Rights Reserved.</font></div></td>
+                    </tr>
+                  </table>
+              </td>
+              <td><img src="../images/spacer.gif" width="1" height="1"></td>
+            </tr>
+            <tr>
+              <td colspan="3"><img src="../images/spacer.gif" width="1" height="1"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

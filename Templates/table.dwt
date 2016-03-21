@@ -1,0 +1,33 @@
+<%@ taglib uri="/Mactive/AdBookerTags" prefix="adbooker" %>
+<%@ taglib uri="/Mactive/CustomerManagerTags" prefix="customermanager" %>
+<%@ taglib uri="/Mactive/CustomerBillingTags" prefix="customerbilling" %>
+<%@ taglib uri="/Mactive/BusinessAreaTags" prefix="businessarea" %>
+<%@ taglib uri="/Mactive/CustomerNotesTags" prefix="customernotes" %>
+<%@ taglib uri="/Mactive/AccountNumberTags" prefix="accountnumber" %>
+<%@ taglib uri="/Mactive/CustomerAliasTags" prefix="customeralias" %>
+
+<%@ taglib uri="/Mactive/CustomerAddressTags" prefix="customeraddress" %>
+<%@ taglib uri="/Mactive/WebBaseTags" prefix="webbase" %>
+<%@ taglib uri="/Mactive/AdBookerSearchTags" prefix="search" %>
+<%@ taglib uri="/Mactive/SharedTags" prefix="shared" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- DW6 -->
+<!-- TemplateInfo codeOutsideHTMLIsLocked="true" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../scripts/javabooker.css" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(../scripts/white_bg.gif);
+}
+-->
+</style>
+</head>
+<body>
+<!-- TemplateBeginEditable name="content" -->content<!-- TemplateEndEditable -->
+</body>
+</html>

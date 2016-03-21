@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <!-- NOTE with Tomcat 4.0 order of tags is important and MUST
+         conform to Section 13.3 of the Servlet2.3 Spec !!! -->
+
+    <!-- Setup for WebBaseMainServlet (/App/WebBaseMain) -->
+    <servlet>
+        <servlet-name>WebBaseMainServlet</servlet-name>
+    <servlet-class>com.mactiveinc.webbase.web.servlet.WebBaseMainServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>GetAdLogoServlet</servlet-name>
+    <servlet-class>com.mactiveinc.webbase.web.servlet.GetAdLogoServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>OpenThoughtServlet</servlet-name>
+    <servlet-class>com.mactiveinc.webbase.web.servlet.OpenThoughtServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TextEditorServlet</servlet-name>
+    <servlet-class>com.mactiveinc.webbase.web.servlet.TextEditorServlet</servlet-class>
+    </servlet>
+
+    <!-- Setup servlet mappings -->
+    <servlet-mapping>
+        <servlet-name>WebBaseMainServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetAdLogoServlet</servlet-name>
+        <url-pattern>/App/GetAdImage</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OpenThoughtServlet</servlet-name>
+        <url-pattern>*.ot</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TextEditorServlet</servlet-name>
+        <url-pattern>*.jte</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/WebBase.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Set Error Mapping -->
+    <error-page>
+    	<exception-type>java.lang.Exception</exception-type>
+    	<location>/error.jsp</location>
+    </error-page>
+
+    <!-- Set mapping for WebBase TagLib -->
+    <taglib>
+    	<taglib-uri>/Mactive/WebBaseTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/mactivewebbasetags.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/mactiveformtags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/mactiveformtags.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/AdBookerTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/adbookertaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerManagerTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customermanagertaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/AdBookerSearchTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/adbookersearchtaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/SharedTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/sharedtaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/AccountNumberTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/accountnumbertaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/BusinessAreaTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/businessareataglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerNotesTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customernotestaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerAddressTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customeraddresstaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerBillingTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customerbillingtaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerCreditTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customercredittaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerBadDebtTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customerbaddebttaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerInternetTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customerinternettaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerContactTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customercontacttaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerContactPersonTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customercontactpersontaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerAliasTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customeraliastaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerAcctXrefTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customeracctxreftaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerStatsSumTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customerstatssumtaglib.tld</taglib-location>
+    </taglib>
+
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerCreditCardTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customercreditcardtaglib.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+    	<taglib-uri>/Mactive/CustomerDocumentsTags</taglib-uri>
+     	<taglib-location>/WEB-INF/tlds/customerdocumentstaglib.tld</taglib-location>
+    </taglib>
+
+
+</web-app>

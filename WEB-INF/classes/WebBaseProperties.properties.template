@@ -1,0 +1,638 @@
+#
+# Enumeration Text Defined
+#
+ExternalOrderStatus.0=Undefined
+ExternalOrderStatus.1=Needs Review
+ExternalOrderStatus.2=Approved
+ExternalOrderStatus.3=Rejected
+#
+# LOGIN ATTRIBUTES
+#   If IgnoreCreditStop=false, then
+#      ErrorURL.CustomerAccessDeniedCredit and ErrorText.LoginDeniedForCredit apply
+Login.IgnoreCreditStop=true
+#   Attribute for the number of login attempts to allow before login is disabled.
+#      This attribute only applies if the Adbase setting for 'DisableFailedLogin' is true.
+Login.MaxAttemptsUntilDisable=3
+#   attribute for amount of inactive time (in seconds) before user is logged off
+#   if negative, then session will never time out
+Login.InactiveTimeLogoff=1200
+Login.URL=/jsp/login.jsp
+#Login.URL=/jsp/index.jsp
+LoginAfterLogout.URL=/jsp/login.jsp
+Login.HomeURL=/jsp/CustomerSearch.jsp
+#Login.AgencyURL=/jsp/ClientList.jsp
+#   Attribute for enabling support for logging in a customer's parent, if the
+#   parent is an agency, whenever the child logs into the system.
+Login.ParentAgency=false
+#
+# Error text messages
+ErrorText.OrderSaveError=Error Saving Ad Order!  The order may be locked by another user.
+ErrorText.OrderIsReadOnly=<font color="#ff0000">LOCKED!</font>
+ErrorText.LoginError=Your login and password are invalid.
+ErrorText.LoginDisabled=Your login is currently disabled,<BR>contact your account representative for more info.
+ErrorText.LoginDatabaseOffline=Your login cannot be accepted because the database is unavailable.
+ErrorText.LoginDeniedForCredit=Login denied due to credit stop on your account.
+ErrorText.LoginBookingStatusDisabled=Login denied due to disabled booking status.
+ErrorText.LoginDeniedCustomerCompany=Login denied due to invalid account.
+ErrorText.CreditCardSelection=Must select a credit card to pay for the order
+ErrorText.AccountPhoneNumAlreadyInUse=There is already an existing account with this phone number.<BR>An Email has been sent to the account holder with the login information.<BR>Contact your account representative for more info.
+ErrorText.AccountUsernameAlreadyInUse=There is already an existing account with this username.<BR>An Email has been sent to the account holder with the login information.<BR>Contact your account representative for more info.
+ErrorText.AccountAddressAlreadyInUse=There is already an existing account with this address.<BR>An Email has been sent to the account holder with the login information.<BR>Contact your account representative for more info.
+#
+# Payment system processing
+#
+# Response Options:
+#	error = next URL set to errorURL and display error message
+#	success = go to next URL and no message displayed
+#	warn = go to next URL and display warning message
+#
+PaymentSystemStatus.0.Response=error
+PaymentSystemStatus.0.Message=Credit Card Payment System Failed
+PaymentSystemStatus.1.Response=success
+PaymentSystemStatus.1.Message=
+PaymentSystemStatus.2.Response=success
+PaymentSystemStatus.2.Message=
+PaymentSystemStatus.3.Response=error
+PaymentSystemStatus.3.Message=Credit Card declined, select another credit card
+PaymentSystemStatus.4.Response=warn
+PaymentSystemStatus.4.Message=Credit Card payment is taking a little longer to go through, but will be processed. If there is any issue with the credit card, we will contact you.
+PaymentSystemStatus.5.Response=warn
+PaymentSystemStatus.5.Message=Credit Card payment is taking a little longer to go through, but will be processed. If there is any issue with the credit card, we will contact you.
+PaymentSystemStatus.6.Response=warn
+PaymentSystemStatus.6.Message=It is taking longer to process your credit card. If there is a problem we will contact you.
+#
+CreditCheckStatus.Invalid=Credit Status Invalid
+CreditCheckStatus.OK=Credit Status OK
+CreditCheckStatus.Disabled=Customer Disabled,
+CreditCheckStatus.CreditStopped=Credit Stopped,
+CreditCheckStatus.CreditAging=Outstanding Receivable,
+CreditCheckStatus.BadPhone=Bad Phone List Member,
+CreditCheckStatus.CreditLimit=Credit Limit Exceeded,
+CreditCheckStatus.OrderCreditLimit=Order Limit Exceeded,
+CreditCheckStatus.PrePaymentRequired=PrePayment Required,
+CreditCheckStatus.Inactive=Relationship Inactive,
+CreditCheckStatus.BadZip=Bad Zip List Member,
+CreditCheckStatus.BadAddress=Bad Address List Member,
+#
+PaymentSystem.AllowPreapproval=false
+PaymentSystem.AllowQuestionableCustomerPreapproval=false
+PaymentSystem.CreditCheck=false
+PaymentSystem.AllowDeferredPayments=false
+#
+# Web pages for customer and rep login errors
+#
+ErrorURL.CustomerAccessDenied=/jsp/AccessDenied.jsp
+ErrorURL.CustomerAccessDisabled=/jsp/AccessDenied.jsp
+ErrorURL.CustomerAccessDeniedCredit=/jsp/AccessDeniedCredit.jsp
+ErrorURL.CustomerAccessBookingStatusDisabled=/jsp/AccessDenied.jsp
+ErrorURL.RepAccessDenied=/jsp/RepAccessDenied.jsp
+ErrorURL.CustomerAccessDeniedCompany=/jsp/AccessDenied.jsp
+#
+# Web pages for specific functions
+#
+#Function.URL.CopyExistingOrder=/jsp/EditAdType.jsp
+Function.URL.CustomerSelected=/jsp/SetAdType.jsp
+Function.URL.ViewCurrentOrders=/Obits/CurrentOrders.jsp
+Function.URL.ViewExistingOrder=/Obits/ViewExistingOrder.jsp
+Function.URL.NewCustomer=/jsp/newaccount.jsp
+Function.URL.NewCustomerOnly=/jsp/newcustomer.jsp
+Function.URL.NewCustomerLateLogin=/jsp/newaccountLL.jsp
+Function.URL.EmailPassword=/jsp/emailpassword.jsp
+Function.URL.AskSecretQuestion=/jsp/askSecretQuestion.jsp
+Function.URL.AnswerQuestion=/jsp/loginAlternative.jsp
+#   - templates for text and html content of order confirmation email -
+Function.URL.ConfirmationEmailText=/jsp/ConfirmationEmailText.jsp
+Function.URL.ConfirmationEmailHtml=/jsp/ConfirmationEmailHtml.jsp
+Function.URL.QuoteConfirmationEmailText=/jsp/QuoteConfirmationEmailText.jsp
+Function.URL.QuoteConfirmationEmailHtml=/jsp/QuoteConfirmationEmailHtml.jsp
+Function.URL.CancellationConfirmationEmailText=/jsp/CancellationConfirmationEmailText.jsp
+Function.URL.CancellationConfirmationEmailHtml=/jsp/CancellationConfirmationEmailHtml.jsp
+#   - template for html content of new account confirmation email -
+Function.URL.AccountConfirmationEmailHtml=/jsp/AccountConfirmationEmailHtml.jsp
+#
+Function.URL.SpellChecker=/jsp/spellcheck.jsp
+Function.URL.ExceptionWord=/jsp/exception.jsp
+#  When a new customer is created in AdbaseE, this property will set the WebLoginURL for that new customer
+#  Default for initial url is "/jsp/SetAdType.jsp"
+Function.URL.NewCustWebLoginURL=/jsp/SetAdType.jsp
+# Customer attributes
+Function.URL.DefaultWebLoginURL=/jsp/SetAdType.jsp
+Function.URL.EditExistingOrder=/jsp/SetMerchandiseAttributes.jsp
+#
+# Email attributes
+#
+Email.Host=HERMOD.mactiveus.com
+Email.From=someone@mactiveinc.com
+Email.Subject=Your Password
+Email.Content=The password for user: %u is: %p
+# Track 77790 Password reset token settings
+# Use %l (for link) to send a password reset URL link
+#Email.Content=Hello %u, click this link to change your password %l
+Email.UseGraphicPassword=false
+Email.MailErrorHtml=<HTML><HEAD><TITLE>Mail Not Sent</TITLE></HEAD><BODY><CENTER><BR><BR>An error occured trying to send your password<BR>(Try login name if email address failed or email address if login name failed)<BR>You may <A HREF="WebBaseMain.do">try again</A></CENTER></BODY></HTML>
+Email.MailErrorMultipleFoundHtml=<HTML><HEAD><TITLE>Mail Not Sent</TITLE></HEAD><BODY><CENTER><BR><BR>Unable to send your password.<BR>Multiple accounts were found with same email address - try login name.<BR>You may <A HREF="WebBaseMain.do">try again</A> or call for assistance.</CENTER></BODY></HTML>
+#
+# Email attributes specific to new account confirmation
+#
+Email.SendAccountConfirmation=false
+Email.AccountConfirmationSubject=Your Account Confirmation
+# Track 72242 Need to add BCC option to account confirmation email
+Email.AccountConfirmationBCC=
+#
+# Email attributes specific to order confirmation
+#
+Email.SendConfirmation=true
+Email.SendConfirmationOnQuote=true
+Email.ConfirmationBCC=
+Email.AttachPreview=false
+Email.AskSecretQuestion=false
+Email.ConfirmationSubject=Your Order Confirmation
+Email.QuoteConfirmationSubject=Your Ad Quote Confirmation
+#   - specify 'plain' or 'html' as the text mime type -
+Email.ConfirmationMimeType=plain
+Email.Debug=false
+#
+# Email attributes specific to order cancellation confirmation
+#
+Email.SendCancellationConfirmation=true
+Email.CancellationConfirmationBCC=
+Email.CancellationAttachPreview=false
+Email.CancellationConfirmationSubject=Your Order Cancellation Confirmation
+#   - specify 'plain' or 'html' as the text mime type -
+Email.CancellationConfirmationMimeType=plain
+#
+# Email settings specific to password reset
+# Track 77790 Password reset token settings
+#
+# Define the password reset token expiration interval (in minutes).
+App.PasswordReset.TokenExpirationInterval=30
+# Page where the user changes their password
+App.PasswordReset.StartPage=/jsp/changePassword.jsp
+# Error page
+App.PasswordReset.ErrorPage=/jsp/AccessDenied.jsp
+# Alternate URL to send in email to user
+#App.PasswordReset.Email.URL=https://localhost/webbase/WebBaseMain.do
+#
+# Month Names
+#
+Month.January=January
+Month.February=February
+Month.March=March
+Month.April=April
+Month.May=May
+Month.June=June
+Month.July=July
+Month.August=August
+Month.September=September
+Month.October=October
+Month.November=November
+Month.December=December
+#
+# Default character set used in forms
+App.DefaultFormCharset=ISO-8859-1
+App.UseCharsetEncoding=false
+App.FromCharsetEncoding=ISO-8859-1
+App.ToCharsetEncoding=WINDOWS-1250
+#
+App.EnableFormSync=true
+# FOR LOAD TESTING PURPOSES:  EnableFormSync should be set to FALSE
+#App.EnableFormSync=false
+# If you want to use the new Zapatec version of the DHTML Calendar then set the 
+# UseZapatecDHTMLCalendar to true.  Otherwise, original version of the DHTML Calendar will be 
+# used.
+App.UseZapatecDHTMLCalendar=true
+# This option will tell the advanced scheduler to use the new DTHML calendar (only Zapatec flavour is supported
+# because it is the only one that handles multiple days being input.  If this is set to false, then the original POPUP
+# calendar will be used and user should see no difference
+App.UseDHTMLCalendarForAdvancedScheduler=true
+# This option defines the amount by which the base deadline should be offset for AdbaseE. Note that this is a
+# signed value. For example, if you want the AdbaseE deadline to be 60 minutes BEFORE the base deadline you 
+# would use a value of -60
+App.DeadlineMinutesOffset=0
+App.AllowDuplicatePhoneNumbers=true
+App.AllowDuplicateAddresses=false
+App.BlockSpecialCharacters=true
+App.NumberDaysQuoteExpires=3
+# The EnableAutoCreditCardRefund is a flag that indicates that AdbaseE should attempt to automatically refund
+# an order after editing
+App.EnableAutoCreditCardRefund=true
+# The EditAdOrderMoveToQueue is the queue that the ad order will be moved to when the edited ad order
+# is saved
+App.EditAdOrderMoveToQueue=Web Review
+App.BadPhoneNumberQueue=Bad Phone Number
+# App.ImageCacheSize=30
+App.EnableRunScheduleDateRollup=true
+App.RunScheduleDateFormat=MMM dd
+App.RunScheduleSameMonthInRangeElimination=true
+App.EnforceTemplateCriteria=false
+App.EnableRunDateValidationOnSave=true
+#
+# Track 70198 Workaround to allow override of placement and position on package primary run schedule.
+# Set the property App.PackagePrimaryRunScheduleOverride.Enable to true to enable override. The placement and
+# position specified on the ad category tree will then override the placement and position on the primary run
+# schedule as determined by the package scheduler.
+# The value of property App.PackagePrimaryRunScheduleOverride.CategoryExclusion is a semi-colon separated list
+# of ad categories that are excluded from the override. 
+#App.PackagePrimaryRunScheduleOverride.Enable=false
+#App.PackagePrimaryRunScheduleOverride.CategoryExclusion=
+#
+# Property App.SetPackageAdsFixedSize is an advanced option to use when App.SetPackageDefaults=true
+# App.SetPackageAdsFixedSize=false
+App.SetPackageDefaults=false
+App.PromptForInsertCountWorkaround=false
+# The phone format for attribute fields defaults to (xxx)xxx-xxxx but may be changed with the following property.
+# Use 'x' to designate a digit. If form validation is used, all digits must be entered.
+App.AttributePhoneMask=(xxx)xxx-xxxx
+# This property should be set to TRUE if you are going to have multiple 
+# customerLogoTags specified on one page.  This was originally put in for St. Pete
+# so they can add in multiple logos to one ad.  The default behavior was to replace a graphic
+# if it was specified at a prior occupied space (top or bottom)
+App.CustomerLogoTagAllowImageStacking=true
+# Set App.AllowSoftLogin to 'false' to disable soft login
+App.AllowSoftLogin=true
+# Property App.FullCopyOrderCreateDateConstraint can be used to control behavior for the full copy
+# feature after system upgrades. If a date (mm/dd/yyyy) is specified for the property, 
+# then the tag <webbase:showIf expression="isFullCopyAvailable"> only returns true if the
+# current order's create date is later than the specified date. This provides a way to 
+# prevent the 'full copy button' from being displayed for orders that were created on older
+# releases prior to the full copy feature and therefore are not compatible with that feature.
+#App.FullCopyOrderCreateDateConstraint=
+#
+# Configure up to four different messages for ad depth violations. The same or
+# a different message can be used when depth must be within a range (Between),  
+# an exact size (Exact), at least a minimum but no max (Min), 
+# or less than a maximum but no min (Max)
+App.DepthStatus.Between=App.DepthMsg.1
+App.DepthStatus.Exact=App.DepthMsg.2
+App.DepthStatus.Min=App.DepthMsg.3
+App.DepthStatus.Max=App.DepthMsg.4
+#
+# Explanation:  {0} - the current Ad size, without unit;
+#               {1} - the expected minimum Ad size, without unit;
+#               {2} - the expected maximum ad size, without unit;
+#               {3} - the unit of measure
+App.DepthMsg.1=Ad size is {0} {3}, but expected size is between {1} and {2} {3}.
+App.DepthMsg.2=Ad size is {0} {3}, but expected size is {1} {3}.
+App.DepthMsg.3=Ad size is {0} {3}, but minimum is {1} {3}
+App.DepthMsg.4=Ad size is {0} {3}, but maximum is {2} {3}.
+
+App.SortPackagesByDescription=false
+# Add an entry for each of the SITES order statuses here if you want to modify the look of the
+# an order in the OrderSearchDetailTag and in the SortOrderSearchTag.
+# Please NOTE... if there is a space in your "order status names", you must put an entry here
+# with all of the spaces REMOVED....
+App.OrderStatus.Expired=ExpiredOrderClass
+App.OrderStatus.Killed=KilledOrderClass
+App.OrderStatus.Ready=ReadyOrderClass
+App.OrderStatus.NotReady=NotReadyClass
+App.OrderStatus.Incomplete=KilledOrderClass
+
+# Add an entry for each of the SITES order statuses here if you want to modify the look of the
+# entry in the GRID control for the tags SortedOrderSearchTag
+# Please NOTE... if there is a space in your "order status names", you must put an entry here
+# with all of the spaces REMOVED....
+#App.OrderStatus.ForegroundColor.Expired=green
+#App.OrderStatus.ForegroundColor.Killed=red
+#App.OrderStatus.ForegroundColor.Ready=blue
+#App.OrderStatus.ForegroundColor.NotReady=yellow
+#
+App.OrderStatus.BackgroundColor.Expired=#0f0f0f
+App.OrderStatus.BackgroundColor.Killed=#ff0000
+#App.OrderStatus.BackgroundColor.Ready=green
+App.OrderStatus.BackgroundColor.NotReady=yellow
+App.Package.Set0.DescriptorString=Good
+App.Package.Set1.DescriptorString=Better
+App.Package.Set2.DescriptorString=Best
+App.Package.Set3.DescriptorString=BestestEver
+
+#
+# This setting is used to specify an external system translator and is currently
+# used to translate a package to an AdPay ratecode.
+# Set the value of this property to the string "AlternateSystemN" and change the 'N' to a
+# number from 1 to 30 to correspond to the equivalent selection in the System Translator tool
+#App.ExternalSysTranslator=AlternateSystem1
+#
+
+########################################################################################################################
+# External AdProduction configuration parameters
+########################################################################################################################
+# The App.ExternalAProductionSystem.ConfigurationFile specifies the mapping file to use for external ad production
+# subsystems.
+#
+# App.ExternalAdProductionSystem.ConfigurationFile=c:/Wave2Configurations/Wave2Mapping.xml
+#
+########################################################################################################################
+# PARTIAL ORDER SAVE configuration parameters
+########################################################################################################################
+
+
+# The App.OrderQueueForPartialOrders specifies the QUEUE that will be assigned to an AD ORDER when the SAVE PARTIAL ORDER command is executed
+# These are legacy and should no longer be used.  These are now setup in SystemAdministrator tool
+#App.OrderQueueForPartialOrders=IncompleteOrders
+
+# The App.OrderStatusForPartialOrder specifies the order status name that will be assigned to an AD ORDER when the SAVE PARTIAL ORDER command is executed
+# These are legacy and should no longer be used.  These are now setup in SystemAdministrator tool
+#App.OrderStatusForPartialOrders=Incomplete
+App.PartialOrder.SendPartialOrderSaveConfirmationEmail=true
+App.PartialOrder.SendPartialOrderSaveConfirmationEmailFrom=joelschlegel@atex.com
+App.PartialOrder.SendPartialOrderSaveConfirmationEmailSubject=AdbaseE partial order confirmation message
+App.PartialOrder.PartialOrderConfirmationEmailHtml=/jsp/PartialOrderConfirmationEmailHtml.jsp
+App.PartialOrder.PartialOrderLinkText=Click here to resume making modifications to your ad order
+# Only use the following property if the link needs to go to a web app other than AdBase-E.
+#App.PartialOrder.EmailUrlLinkText=http://localhost:8080/testapp/login.jsp
+
+########################################################################################################################
+# Modirum 3d Secure Shared Secret and CardType conversion configuration parameters
+########################################################################################################################
+#
+# Modirum3dSecure.SharedSecret=secret3
+# Modirum3dSecure.GenerateCreditCardNoSelectionEntry=true
+#
+# Add an entry that will map a Atex credit card name to the cardType that is expected via the Modirum 3d Secure
+# software.  Please note that this lookup will occur on the Modirum3dSecureTag.java
+# The general form of the entiry is 
+# Modirum.CardTypeEntry.<card name with spaces removed>=<cardType value to be sent to the Merchant Server>
+# IMPORTANT NOTE:  if there is a space in the Credit Card Name in the Atex / Adbase system, the name that you specify in this 
+# file is the credit card name WITH ALL THE SPACES REMOVED.  Example:  if the card name that is specified System Admin is 
+# 'American Express', then your entry in this file would look like: Modirum.CardTypeEntry.AmericanExpress=1 (or whatever the card type the
+#
+# Modirum Merchant server is expecting. 
+# Modirum3dSecure.CardTypeEntry.Visa=1
+# Modirum3dSecure.CardTypeEntry.MasterCard=2
+# Modirum3dSecure.CardTypeEntry.MaestroUk=3
+
+#
+#
+# Selective ConstraintManager initializations
+# Warning: it is up to the 'user' to make sure that if provided, all combinations are valid
+# If set to 'nothing' then the default of all will be loaded via the ConstraintManager
+#App.ConstraintManager.SelectiveCustomerTypeList=
+#App.ConstraintManager.SelectiveAdTypeList=
+#App.ConstraintManager.SelectiveProductNameList=
+#App.SystemManager.HealthStatusMonitoringCfgFile=M:/Mactive/Data/AdbaseSystemManagerConfig/AdbaseSystemManagerHealthStatusCfg.xml
+#
+#App.BodyContentNextStyle=true
+#
+# Spell Check Subsystem
+#
+SpellCheck.Dictionary=dict/english.0
+SpellCheck.PhoneticData=
+SpellCheck.Suggestion.Threshold=100
+SpellCheck.Suggestion.MaximumSuggestions=10
+Exception.Dictionary=dict/english.X
+
+# WebBase Logging
+#
+Logger.Properties=WebBaseLoggerProperties.xml
+#
+# OJB JDBC properties
+# Note: These variables overwrite values in repository.xml.
+#       To configure using the default value in repository.xml,
+#       comment the line using a '#'.
+#
+# Note: The following is for Oracle database.  Only uncomment one set of JDBC properties.
+#
+#JDBC.Platform=Oracle
+#JDBC.JDBCLevel=2.0
+#JDBC.DbAlias=@localhost:1521:SERV
+#JDBC.Driver=oracle.jdbc.driver.OracleDriver
+#JDBC.Protocol=jdbc
+#JDBC.SubProtocol=oracle:thin
+#JDBC.Username=adbase
+#JDBC.Password=adbase
+#
+# Note: Uncomment below for MS SQL Server 2005 databases.
+#
+#JDBC.Platform=MSSQL
+#JDBC.JDBCLevel=2.0
+#JDBC.DbAlias=//localhost:1433;DatabaseName=serv
+#JDBC.Driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#JDBC.Protocol=jdbc
+#JDBC.SubProtocol=sqlserver
+#JDBC.Username=sa
+#JDBC.Password=mactive
+#
+# Note: Uncomment below for MS SQL databases.
+#
+#JDBC.Platform=MSSQL
+#JDBC.JDBCLevel=2.0
+#JDBC.DbAlias=//localhost:1433;DatabaseName=SERV
+#JDBC.Driver=com.microsoft.jdbc.sqlserver.SQLServerDriver
+#JDBC.Protocol=jdbc
+#JDBC.SubProtocol=microsoft:sqlserver
+#JDBC.Username=sa
+#JDBC.Password=mactive
+#
+# Kill Ad Order Confirmation String
+KillAdOrder.ConfirmationString=Kill Ad Order?
+#
+# Add Another AD confirmation string... For the following entries, a dialog will NOT be displayed if
+# the confirmation string is left empty
+#     AddAnotherAd.ConfirmationString
+#     MoveToNextAdPackageComponent.ConfirmationString
+AddAnotherAd.ConfirmationString=Are you sure you want to add another AD to the order?
+CancelCurrentAd.ConfirmationString=Are you sure you want to discard the current ad you are taking?  You will not be able to UNDO this
+MoveToNextAdPackageComponent.ConfirmationString=Are you sure you want to move on to the next ad of the current package?
+# Year selection list generator
+YearSelectionList.NumberOfYears=8
+#
+# Credit card Payment
+CreditCardPayment.CardHolderName=Credit Card Holder Name must be specified.
+CreditCardPayment.CardNumber=Credit Card Number must be specified.
+CreditCardPayment.CardNumberInvalid=Credit Card Number is invalid.
+CreditCardPayment.CardExpirationMonth=Expiration Month must be specified.
+CreditCardPayment.CardExpirationYear=Expiration Year must be specified.
+CreditCardPayment.SystemError=System unable to save Credit Card information.
+CreditCardPayment.ZeroOrderCostValid=false
+CreditCardPayment.EnterCardEachSession=false
+CreditCardPayment.SavePaymentOnQuote=false
+#
+# Port Definitions
+#  Specify the Http and Https ports (default is 80 and 443)
+#
+Port.Http=
+Port.Https=
+#
+#Search.ServiceEndPoint=
+#Search.PageSize=500
+#
+# Photo source 
+#  Set to 'AdPay' or 'AMC' or 'Adbase'
+#Photo.Source=
+#Photo.HotFolderExport=C:/Temp/HotFolder/Export/
+#Photo.HotFolderImport=C:/Temp/HotFolder/Import/
+#Photo.HotFolderTimeout=7
+#Photo.ScaleImage=true
+#FitImage will need Scale Image set to true also
+#Photo.FitImage=true
+#
+# AdPay
+#
+#  Adpay.InsertAllAdsIfServiceEnabled property: 
+#    If the AdPay InsertAd web service is configured to be enabled/active,
+#    and this property is set to "false", then ONLY ads that have photos
+#    uploaded will be passed to the service. If the value is "true", then 
+#    all ads will be passed to the service.
+#
+#AdPay.PaperId=short-form-paperid-provided-by-Adpay
+#AdPay.PaperIdAlias=long-form-paperid-provided-by-Adpay
+#AdPay.SecureMode=true
+#AdPay.ServiceEndPoint=service-endpoint-url
+#AdPay.ServiceUser=your-adpay-user
+#AdPay.ServicePassword=your-adpay-password
+#AdPay.InsertAllAdsIfServiceEnabled=false
+# Notify if Adpay web service error
+#AdPay.SendAdminEmail=true
+#AdPay.SendAdminEmailTo=your-admin-email-addr
+#AdPay.SendAdminEmailFrom=your-from-email-addr
+#AdPay.AdminErrorEmailHtml=/jsp/AdpayErrorEmailHtml.jsp
+#AdPay.AdminErrorEmailSubject=AdbaseE Encountered AdPay Error
+#
+# Ipix (AMC)
+# If iPIX services are being utilized uncomment the Ipix properties and define them
+#
+#  Three iPIX implementations have been supported 1) Rimfire RSAPI, 2) AdBuilder, and 3) Bulk Uploader
+#
+#  Properties that apply to 1), 2) and 3)
+#    Host=view-host.admission.net (your-company.ipixmedia.com is obsolete)
+#    Account=your-accountname
+#    Password=your-password
+#    CameraIconId   - DB Id of your camera icon
+#    BasicRateCount - if Ipix images are submitted and the number is not more than
+#    	BasicRateCount, then the "Ipix Basic Material" will be added to the ad order,
+#    	otherwise the "Ipix Extra Material" will be added. (the material names are
+#    	specified via JSP custom tag). If BasicRateCount is 0 then the variable iPIX
+#       material charge definitions are used instead (if feature is available in S/W release)
+#
+#  Properties that apply to 1):
+#     MaxWellCount  - the max number of image wells that the Ipix page might contain
+#
+#  Properties that apply to 1) and 2):
+#     MinExpireDays=your-account-minimum
+#
+#  Properties that apply to 2) and 3):
+#     SecureMode    - whether or not client pages should access iPIX server using https
+#     CameraIconFloat - use true for icon to float, false to lock down icon
+#
+#  Properties that apply to 3):
+#     CustomerId   - value that should be used to construct mediaset name of the form _CUSTOMERID_ADID
+#
+#Ipix.MaxWellCount=0
+#Ipix.CustomerId=your-customerid
+#Ipix.Host=view-host.admission.net
+#Ipix.Account=your-accountname
+#Ipix.Password=your-password
+#Ipix.BasicRateCount=1
+#Ipix.MinExpireDays=your-account-minimum
+#Ipix.SecureMode=true
+#Ipix.CameraIconId=999
+#Ipix.CameraIconFloat=true
+#
+#
+# Price Range Attribute Name
+PriceRange.Name=Selling Price
+#
+# Modirum 3d Secure settings
+# The following properties are used by the Modirum3dSecureTag and allow site specific settings for the 
+# interface with the Modirum 3d Secure merchant server.  Please note that the tag allows you to specify this 
+# parameter to, however, the value set here takes precedence
+#Modirum3dSecure.SharedSecret=
+#
+#
+# Calendar
+# Uncommend the following line to limit the number of days bookable
+# in the future in the JavaScript calendar
+#
+Calendar.DaysBookableInFuture=45
+# DHTML Calendar Information:
+# Compatibility:   Windows XP:  Firefox 1.0, Mozilla, Netscape 7,  2.0, IE 7, IE 6.x, Opera 9.02,
+#                  MAC OS X (10.3.x): Firefox 1.0, Firefox 2.0, Mozilla 1.7, Netscape
+#                           NOTE:  Safari (1.3.2) and Opera 9.0.2 DO NOT WORK PROPERLY with a calendar selecting multiple dates
+#                      OS X (10.3.4): Firefox 1.0, Firefox 2.0, Mozilla 1.7, Netscape, Safari 2.0
+# For the new Zapatec Calendar, this controls how many months are displayed when the Calendar shows up
+# Warning:  on IE, setting this value greater than 1 seems to cause IE to crash... beware.....  More information:
+# It seemed to have something to do with having the GoogleToolbar installed.  Once I uninstalled the google toolbar, 
+# I could not get it to crash any longer.  Also note:  the MAXIMUM value for this is 12
+Calendar.NumberOfMonthsToDisplay=3
+# For the new Zapatec Calendar, this controls how many columns are displayed in the grid of months
+Calendar.NumberOfMonthsInRow=3
+# For the new Zapatec Calendar, this controls the input/output field formats displayed for the date
+# PLEASE NOTE:  this format string is the input string required by the Zapatec Calendar component.  Please use the format
+# strings that are specified in the Zapatec Calendar component documentation
+Calendar.DateFormatString=%m/%d/%Y 
+#
+# Symbol to use for currency. Specify symbol as named or numeric character entity as necessary(see examples). Default is the $
+#    Dollar         $ or &#36;
+#    Euro      &euro; or &#8364;
+#    Pound    &pound; or &#163;
+#Currency.Symbol=&euro;
+
+#Third Party Authentication public key
+#TPAuthentication.key=C:/mykey.keystore
+#TPAuthentication.redirectURL=https://marketplace.omaha.com/index.php?u_page=1002&u_service=atex
+#TPAuthentication.endpoint=https://marketplace.omaha.com/websvc/server.php
+#TPAuthentication.syncAccounts=/jsp/syncAccounts.jsp
+#AdbaseE.PNG=true
+#Default.CustomerCompany="Journal"
+#Default.CustomerType="Private Party"
+
+# AdbaseE ad display option, PNG/JEPG (Default-PNG. For JPEG, AdbaseE.PNG=false)
+AdbaseE.PNG=true
+#
+#Price Re-rate flag
+Price.RerateNotAllowedFlag=false
+Price.NoPriceChangeFlag=false
+
+
+# Set the temp directory for uploading photos.  If unset, media loader will use
+# the default (%CATALINA_HOME%/temp).
+#
+#Photo.TempDirectory=C:/Temp
+
+
+# Set the change password page when password change is forced on normal login
+# (not late login).
+#
+Function.URL.ChangePassword=/jsp/changePassword.jsp
+
+#
+# Flag for enabling output of "showHidePAFElements" Javascript call.
+#
+App.PAFOutputJavascriptEnabled=false
+
+# This setting is used to enable the creation of a customer after the user has started
+# creating their ad and before they are finished.
+#App.EnableMidCustomerCreate=true
+
+# This setting is used to unlock the customer after a user has logged into AdBase-E
+# or has created a new customer.
+#App.UnlockCustomerAfterLogin=true
+
+# This setting is used to determine whether an ad order is editable when at least
+# one of its ads does not have an EPS BLOB CRC value in the ad order's XML document.
+#App.OrdersWithMissingCRCAreEditable=true
+
+# This was added to enable secure page old fashion way. Track #61707
+App.DeprecatedPageInclude=true
+
+#
+# Define properties for AdBase Self-Service web client redirects.  Do not set any of
+# the following properties if the redirect feature is not being used.
+#
+# Define the expiration interval (in seconds) of the "AdBase Self-Service web client to AdBase-E" redirect token.
+#App.RedirectTokenExpirationInterval=60
+# Define page to redirect to once a redirect is received from AdBase Self-Service web app.
+#App.RedirectStartPage=/jsp/SetAdTypeAuto.jsp
+# Define URL prefix of the page that will be redirected back to in AdBase Self-Service web app.
+#App.RedirectReturnURLPrefix=http://localhost:8080/
+# Define the page to redirect to if the user clicks a link after a session timeout.
+# This value will get appended to the "App.RedirectReturnURLPrefix" value to get
+# a complete URL.
+#App.SessionTimeoutRedirectReturnPage=Timeout.jsp
+# Define Self-service page that we will redirect to after Credit Card update in AdbaseE
+#App.RedirectAfterCreditCardUpdatePage=CCAuto.jsp
+#
+# Flag for enabling ad order edit override.
+#
+App.OverrideAdOrderEditEnabled=false
+MediaLoader.LegacyMode=true
